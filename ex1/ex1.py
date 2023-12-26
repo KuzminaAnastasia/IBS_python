@@ -10,7 +10,7 @@ def read_csv_file(file_path):
     return data
 
 
-def set_dictionary(arr):
+def calculate_average_age_by_position(arr):
     dic = dict()
     for row in arr:
         if row[2] in dic:
@@ -29,5 +29,5 @@ file_path = 'data/employees.csv'
 csv_data = read_csv_file(file_path)
 csv_data = csv_data[1:]
 
-print(set_dictionary(csv_data))
+print(calculate_average_age_by_position(csv_data))
 
