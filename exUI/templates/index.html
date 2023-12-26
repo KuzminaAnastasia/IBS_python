@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список дел</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Список дел:</h1>
+    <ul>
+        {% for todo in todo_list %}
+            <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Добавить задачу:</h2>
+    <form action="/add" method="post">
+        <input type="text" name="todo" placeholder="Введите задачу">
+        <input type="submit" value="Добавить">
+    </form>
+</body>
+</html>
